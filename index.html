@@ -70,8 +70,30 @@
     }
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
     .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .hero-kenburns { animation: kenburns 24s ease-in-out infinite alternate; will-change: transform; }
+    @keyframes kenburns {
+      0% { transform: scale(1) translate(0, 0); }
+      100% { transform: scale(1.09) translate(-1.5%, -1%); }
+    }
+    .hero-glow {
+      position: absolute;
+      left: 50%; top: 42%;
+      width: 640px; height: 640px;
+      max-width: 90vw;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(245,166,35,0.38) 0%, rgba(245,166,35,0) 70%);
+      filter: blur(6px);
+      animation: glow-drift 13s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    @keyframes glow-drift {
+      0% { transform: translate(-54%, -53%) scale(1); }
+      100% { transform: translate(-46%, -47%) scale(1.18); }
+    }
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none; transition: none; }
+      .hero-kenburns { animation: none; }
+      .hero-glow { animation: none; }
     }
   </style>
 </head>
@@ -98,7 +120,7 @@
     <!-- HERO -->
     <section class="relative min-h-[100dvh] flex items-center pt-16 overflow-hidden">
       <div class="absolute inset-0">
-        <img src="question-mark-touch.jpg" alt="Masked figure in sequin jacket reaching toward a molten gold circuit question mark on a dusk clifftop" class="h-full w-full object-cover object-center opacity-90" />
+        <img src="question-mark-touch.jpg" alt="Masked figure in sequin jacket reaching toward a molten gold circuit question mark on a dusk clifftop" class="hero-kenburns h-full w-full object-cover object-center opacity-90" />
         <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/70 to-bg/30"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-bg/80 via-transparent to-bg/40"></div>
       </div>
@@ -106,7 +128,8 @@
       <div class="relative z-10 mx-auto w-full max-w-5xl px-4 py-20 text-center md:px-6">
         <p class="text-xs font-medium tracking-brand uppercase text-primary">UK · Queer pop writing</p>
         <h1 class="sr-only">AudioJoy</h1>
-        <img src="logo-mark.png" alt="" class="mx-auto mt-8 h-auto w-full max-w-3xl drop-shadow-2xl" />
+        <div class="hero-glow"></div>
+        <img src="logo-mark.png" alt="" class="relative mx-auto mt-8 h-auto w-full max-w-3xl drop-shadow-2xl" />
         <p class="era mt-6 text-5xl md:text-7xl text-primary">Yellow Aura</p>
         <p class="mx-auto mt-2 text-sm tracking-wide text-primary/90">Listen for free</p>
         <p class="mx-auto mt-6 max-w-lg text-base leading-relaxed text-fg/90">
