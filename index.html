@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AudioJoy — UK Queer Pop Writing</title>
+  <meta name="description" content="AudioJoy — UK queer pop writing. Yellow Aura: songs written to be worn by a performer. I write. Someone braver sings." />
+  <meta name="theme-color" content="#07080c" />
+  <meta property="og:title" content="AudioJoy" />
+  <meta property="og:description" content="UK queer pop writing. Yellow Aura — a sketch, not the record." />
+  <meta property="og:image" content="question-mark-touch.jpg" />
+  <meta property="og:image:width" content="1439" />
+  <meta property="og:image:height" content="1439" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♪</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#07080c',
+            surface: '#0e1016',
+            fg: '#f4f1ea',
+            muted: '#a8a29e',
+            primary: '#f5a623',
+            border: '#1c1f2a',
+            accent: '#ffd166'
+          },
+          fontFamily: {
+            sans: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Syne', 'Outfit', 'sans-serif']
+          },
+          letterSpacing: {
+            brand: '0.22em',
+            display: '0.18em'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root { color-scheme: dark; }
+    body { background: #07080c; color: #f4f1ea; }
+    .era { font-family: Syne, Outfit, sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+    .aura-glow { box-shadow: 0 0 40px -8px rgba(245,166,35,0.55); }
+    .gold-rule { height: 1px; background: linear-gradient(90deg, transparent, #f5a62355, transparent); }
+    .framed { border: 1px solid #1c1f2a; box-shadow: 0 20px 50px -20px rgba(0,0,0,0.7); }
+    .ticker-track { animation: ticker 28s linear infinite; }
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .wave-bar { animation: wave 1.1s ease-in-out infinite alternate; }
+    @keyframes wave {
+      from { transform: scaleY(0.35); }
+      to { transform: scaleY(1); }
+    }
+    /* soft gradient overlays for images */
+    .img-veil::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, #07080c 0%, transparent 45%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-bg text-fg font-sans min-h-dvh flex flex-col">
+  <!-- Skip -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-primary focus:px-4 focus:py-2 focus:text-bg">Skip to content</a>
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-40 border-b border-border/60 bg-bg/85 backdrop-blur-md">
+    <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 md:px-6">
+      <a href="#" class="flex items-center gap-2">
+        <img src="logo-mark.png" alt="AudioJoy" class="h-7 w-auto" />
+      </a>
+      <nav class="hidden items-center gap-6 text-sm font-medium text-muted md:flex">
+        <a href="#music" class="hover:text-primary transition-colors">Music</a>
+        <a href="#aura" class="hover:text-primary transition-colors">Yellow Aura</a>
+        <a href="#about" class="hover:text-primary transition-colors">About</a>
+        <a href="#list" class="hover:text-primary transition-colors">List</a>
+      </nav>
+      <button id="header-play" class="inline-flex items-center gap-2 rounded-md bg-primary px-3.5 py-1.5 text-sm font-medium text-bg hover:bg-fg transition-colors aura-glow" title="Listen for free">
+        <svg class="size-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        Demo
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="flex-1">
+    <!-- HERO -->
+    <section class="relative min-h-[100dvh] flex items-center pt-16 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="question-mark-touch.jpg" alt="Masked figure in sequin jacket reaching toward a molten gold circuit question mark on a dusk clifftop" class="h-full w-full object-cover object-center opacity-90" />
+        <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/70 to-bg/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-bg/80 via-transparent to-bg/40"></div>
+      </div>
+
+      <div class="relative z-10 mx-auto w-full max-w-5xl px-4 py-20 text-center md:px-6">
+        <p class="text-xs font-medium tracking-brand uppercase text-primary">UK · Queer pop writing</p>
+        <h1 class="sr-only">AudioJoy</h1>
+        <img src="logo-mark.png" alt="" class="mx-auto mt-8 h-auto w-full max-w-3xl drop-shadow-2xl" />
+        <p class="era mt-6 text-5xl md:text-7xl text-primary">Yellow Aura</p>
+        <p class="mx-auto mt-2 text-sm tracking-wide text-primary/90">Listen for free</p>
+        <p class="mx-auto mt-6 max-w-lg text-base leading-relaxed text-fg/90">
+          Songs written at the edge of the question. I write. Someone — or something — braver sings.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <button id="hero-play" class="inline-flex h-12 items-center gap-2 rounded-md bg-primary px-6 text-sm font-semibold text-bg hover:bg-fg transition-colors aura-glow">
+            <svg class="size-4" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Hear the demo
+          </button>
+          <a href="#aura" class="inline-flex h-12 items-center gap-2 px-5 text-sm font-medium text-fg hover:text-primary transition-colors">
+            The songs
+            <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <p class="mt-4 text-xs text-muted"><span class="play-count">0</span> plays</p>
+      </div>
+    </section>
+
+    <!-- Ticker -->
+    <div class="overflow-hidden border-y border-border bg-surface py-3">
+      <div class="ticker-track flex w-max gap-10 text-xs tracking-display uppercase text-muted">
+        <div class="flex gap-10 pr-10">
+          <span>Yellow Aura ·</span><span>A sketch, not the record ·</span><span>What's the point ·</span>
+          <span>Shook By The Look ·</span><span>There's Something Out There ·</span><span>The writer in the wings ·</span><span>audiojoy.uk ·</span>
+          <span>May dreams unfold ·</span>
+        </div>
+        <div class="flex gap-10 pr-10" aria-hidden="true">
+          <span>Yellow Aura ·</span><span>A sketch, not the record ·</span><span>What's the point ·</span>
+          <span>Shook By The Look ·</span><span>There's Something Out There ·</span><span>The writer in the wings ·</span><span>audiojoy.uk ·</span>
+          <span>May dreams unfold ·</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAY DREAMS UNFOLD full-bleed -->
+    <section class="relative">
+      <div class="relative img-veil">
+        <img src="may-dreams-unfold.jpg" alt="Night coastal landscape with moon, lighthouse beam and kneeling figure beside glowing text MAY DREAMS UNFOLD" class="w-full h-auto object-cover max-h-[70vh]" />
+      </div>
+      <div class="mx-auto max-w-3xl px-4 py-16 md:px-6 text-center">
+        <p class="text-xs tracking-brand uppercase text-primary">The invitation</p>
+        <h2 class="era mt-3 text-4xl md:text-5xl">May dreams unfold.</h2>
+        <p class="mt-6 text-base leading-relaxed text-muted">
+          Ethereal pop in gold mist. Written to be worn — by a queen, a robot, or any voice that can carry the ether.
+          What exists now is a sketch. The door is open.
+        </p>
+      </div>
+    </section>
+
+    <div class="gold-rule mx-auto max-w-6xl"></div>
+
+    <!-- MUSIC -->
+    <section id="music" class="mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28">
+      <p class="text-xs tracking-brand uppercase text-primary">Listen</p>
+      <h2 class="mt-3 font-display text-5xl md:text-7xl">Music</h2>
+      <p class="mt-4 max-w-xl text-base leading-relaxed text-muted">
+        One co-write that Matt Pop turned into an anthem of sass — and a sketch of the next suite.
+        Stream <em>Shook By The Look</em>, written with Kieran and Collin. Yellow Aura is a demo. Not the record.
+      </p>
+      <p class="mt-3 text-sm text-muted">Finished songs coming to Spotify soon.</p>
+
+      <!-- Yellow Aura card -->
+      <div class="mt-14 grid gap-10 md:grid-cols-2 md:items-center">
+        <div class="relative overflow-hidden rounded-lg framed">
+          <img src="question-mark-touch.jpg" alt="Yellow Aura cover — molten question mark" class="aspect-square w-full object-cover" />
+        </div>
+        <div>
+          <p class="text-xs tracking-display uppercase text-primary">Demo · sketch · 2026</p>
+          <h3 class="mt-2 font-display text-4xl md:text-5xl">Yellow Aura</h3>
+          <p class="mt-1 text-primary">Demo · sketch · Listen for free</p>
+          <p class="mt-5 text-base leading-relaxed text-muted">
+            A sketch of the suite — not the record. Gold mist, a mashup, a colour of something waiting for a voice.
+            When a performer wears it, this comes down.
+          </p>
+          <p class="mt-4 text-sm text-muted/80">
+            A sketch of an ascending nylon arpeggio — not the finished vocal. That part may be a robot.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <button class="play-track inline-flex h-11 items-center gap-2 rounded-md bg-primary px-5 text-sm font-medium text-bg hover:bg-fg transition-colors" data-src="yellow-aura.mp3">
+              <svg class="size-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Hear the demo
+            </button>
+            <a href="yellow-aura.mp3" download class="inline-flex h-11 items-center gap-2 rounded-md border border-border px-5 text-sm font-medium text-fg hover:border-primary hover:text-primary transition-colors">
+              Download MP3
+            </a>
+            <span class="text-xs text-muted"><span class="play-count">0</span> plays</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shook card -->
+      <div class="mt-20 grid gap-10 md:grid-cols-2 md:items-center">
+        <div class="order-2 md:order-1">
+          <p class="text-xs tracking-display uppercase text-primary">Released · 2023</p>
+          <h3 class="mt-2 font-display text-4xl md:text-5xl">Shook By The Look</h3>
+          <p class="mt-1 text-primary">An anthem of sass</p>
+          <p class="mt-5 text-base leading-relaxed text-muted">
+            A co-write, and the only song the three of them made together. Kieran created the original music, wrote a verse, and sang backing vocals.
+            AudioJoy wrote the other verses and the chorus. Collin brought a brilliant rap, backing vocals, and the arranger’s ear.
+            Matt Pop turned the tune into a bright, spangly anthem of sass — with a sparkle borrowed, in part, from Pippa Dee.
+          </p>
+          <ul class="mt-5 space-y-1 text-sm text-muted">
+            <li><span class="text-fg">Kieran</span> — original music, verse, backing vocals</li>
+            <li><span class="text-fg">AudioJoy</span> — verses, chorus</li>
+            <li><span class="text-fg">Collin</span> — rap, backing vocals, arrangement</li>
+            <li><span class="text-fg">Matt Pop</span> — the bright, spangly anthem</li>
+          </ul>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <button class="play-track inline-flex h-11 items-center gap-2 rounded-md bg-primary px-5 text-sm font-medium text-bg hover:bg-fg transition-colors" data-src="shook-sample.mp3">
+              <svg class="size-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Sample
+            </button>
+            <a href="https://music.apple.com/album/shook-by-the-look-single/1695893718" target="_blank" rel="noopener" class="inline-flex h-11 items-center gap-2 rounded-md border border-border px-5 text-sm font-medium text-fg hover:border-primary hover:text-primary transition-colors">
+              Apple Music
+            </a>
+            <a href="https://open.spotify.com/artist/2hSwuSFQrPmJkJn00JSye5" target="_blank" rel="noopener" class="inline-flex h-11 items-center gap-2 rounded-md border border-border px-5 text-sm font-medium text-fg hover:border-primary hover:text-primary transition-colors">
+              Spotify
+            </a>
+            <span class="text-xs text-muted"><span class="play-count">0</span> plays</span>
+          </div>
+        </div>
+        <div class="order-1 md:order-2 relative overflow-hidden rounded-lg framed">
+          <img src="shook.jpg" alt="Shook By The Look artwork" class="aspect-square w-full object-cover" />
+        </div>
+      </div>
+
+      <!-- Something Out There card -->
+      <div class="mt-20 grid gap-10 md:grid-cols-2 md:items-center">
+        <div class="relative overflow-hidden rounded-lg framed">
+          <img src="somethingoutthere-v1-cover.jpg" alt="There's Something Out There artwork" class="aspect-square w-full object-cover" />
+        </div>
+        <div>
+          <p class="text-xs tracking-display uppercase text-primary">Demo · sketch · 2026</p>
+          <h3 class="mt-2 font-display text-4xl md:text-5xl">There's Something Out There</h3>
+          <p class="mt-1 text-primary">Melodic house · two sketches, same question</p>
+          <p class="mt-5 text-base leading-relaxed text-muted">
+            A late-80s house revival with a four-on-the-floor pulse and a Detroit techno edge — worked twice,
+            two different sketches of the same idea. Neither is the record. Pick the one that finds you.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <button class="play-track inline-flex h-11 items-center gap-2 rounded-md bg-primary px-5 text-sm font-medium text-bg hover:bg-fg transition-colors" data-src="somethingoutthere-v1.mp3">
+              <svg class="size-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Version 1
+            </button>
+            <button class="play-track inline-flex h-11 items-center gap-2 rounded-md border border-border px-5 text-sm font-medium text-fg hover:border-primary hover:text-primary transition-colors" data-src="somethingoutthere-v2.mp3">
+              <svg class="size-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Version 2
+            </button>
+            <span class="text-xs text-muted"><span class="play-count">0</span> plays</span>
+          </div>
+          <div class="mt-3 flex flex-wrap items-center gap-3">
+            <a href="somethingoutthere-v1.mp3" download class="text-xs text-muted hover:text-primary transition-colors underline underline-offset-2">Download V1</a>
+            <a href="somethingoutthere-v2.mp3" download class="text-xs text-muted hover:text-primary transition-colors underline underline-offset-2">Download V2</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-rule mx-auto max-w-6xl"></div>
+
+    <!-- AURA deep -->
+    <section id="aura" class="mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28">
+      <p class="text-xs tracking-brand uppercase text-primary">Demo · sketch · Listen for free</p>
+      <h2 class="era mt-3 text-5xl md:text-7xl text-primary">Yellow Aura</h2>
+      <p class="mt-4 max-w-xl text-base leading-relaxed text-fg">
+        Not the record. A colour of the suite, waiting for a voice. The writer stays in the wings.
+      </p>
+      <p class="mt-3 text-xs text-muted"><span class="play-count">0</span> plays</p>
+
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+        <div class="rounded-lg border border-border bg-surface/50 p-6">
+          <p class="text-xs text-primary">01</p>
+          <h3 class="mt-2 font-display text-xl">The sketch</h3>
+          <p class="mt-3 text-sm leading-relaxed text-muted">A demo. A mashup. A colour of the suite — not the record it might become.</p>
+        </div>
+        <div class="rounded-lg border border-border bg-surface/50 p-6">
+          <p class="text-xs text-primary">02</p>
+          <h3 class="mt-2 font-display text-xl">The voice</h3>
+          <p class="mt-3 text-sm leading-relaxed text-muted">A robot, a queen, a singer who has not arrived yet. The songs are waiting to be worn.</p>
+        </div>
+        <div class="rounded-lg border border-border bg-surface/50 p-6">
+          <p class="text-xs text-primary">03</p>
+          <h3 class="mt-2 font-display text-xl">The wait</h3>
+          <p class="mt-3 text-sm leading-relaxed text-muted">When they are ready to be sung, the people who asked will hear first.</p>
+        </div>
+      </div>
+
+      <blockquote class="mt-16 border-l-2 border-primary pl-6 text-xl md:text-2xl font-display leading-snug text-fg">
+        “These songs were always meant to be worn.”
+      </blockquote>
+    </section>
+
+    <!-- ABOUT with dove portrait -->
+    <section id="about" class="border-t border-border bg-surface/30">
+      <div class="mx-auto grid max-w-6xl items-end gap-10 px-4 py-20 md:grid-cols-2 md:px-6 md:py-28">
+        <div>
+          <p class="text-xs tracking-brand uppercase text-primary">The writer</p>
+          <h2 class="sr-only">AudioJoy</h2>
+          <img src="logo-mark.png" alt="" class="mt-3 h-auto w-full max-w-sm" />
+          <p class="mt-6 max-w-md text-base leading-relaxed text-muted">
+            A UK queer pop writing project. I am not a frontman. I write songs for people who are —
+            for a queen, a performer, a voice that can wear sequins without flinching.
+          </p>
+        </div>
+        <div class="relative overflow-hidden rounded-lg framed">
+          <img src="dove-phone-ig.jpg" alt="Figure in sequin jacket holding a phone with glowing dove" class="w-full object-cover aspect-[3/4] md:aspect-auto md:max-h-[520px]" />
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-3xl px-4 pb-20 md:px-6 md:pb-28">
+        <p class="text-xs tracking-brand uppercase text-primary">Artist bio</p>
+        <h3 class="mt-3 font-display text-3xl md:text-4xl">For the page.</h3>
+        <div class="mt-8 space-y-5 text-base leading-relaxed text-muted">
+          <p>
+            AudioJoy is a British queer pop writer working from the wings. The project exists to put songs on bodies that can hold a stage —
+            drag artists, vocalists, performers who can take a look and make it a world.
+          </p>
+          <p>
+            The 2023 single “Shook By The Look” is a co-write with Kieran and Collin. Matt Pop turned the tune into a bright, spangly anthem of sass —
+            a sparkle shaped, in part, by AudioJoy’s friend Pippa Dee, a special kind of angel who worked the door at London’s Royal Vauxhall Tavern.
+          </p>
+          <p>
+            AudioJoy’s forthcoming suite, Yellow Aura, is ethereal pop in gold mist — being written to be worn by a queen, a robot, or whatever voice can carry it.
+            What exists now is a sketch, not a master. AudioJoy is not a front. It is a writer. The door is open.
+          </p>
+        </div>
+
+        <div class="mt-12 rounded-lg border border-border bg-bg/60 p-6">
+          <p class="text-xs tracking-brand uppercase text-primary">Dedication</p>
+          <p class="mt-3 text-base leading-relaxed text-fg">
+            For Pippa Dee. A special kind of angel. For many years she worked the door at the Royal Vauxhall Tavern —
+            the threshold of the night, the first warmth, the person who could make a doorway feel like you were already loved.
+            Some of the sparkle in this song is hers. I love her forever.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIST -->
+    <section id="list" class="mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28">
+      <div class="grid gap-12 md:grid-cols-2">
+        <div>
+          <p class="text-xs tracking-brand uppercase text-primary">The list</p>
+          <h2 class="mt-3 font-display text-4xl md:text-5xl">If they find a home.</h2>
+          <p class="mt-5 text-base leading-relaxed text-muted">
+            Leave an email. When Yellow Aura is more than a sketch — when someone wears it — you’ll hear it with care.
+            No spam. Just the songs, when they have a voice.
+          </p>
+        </div>
+        <form id="list-form" class="space-y-4">
+          <div>
+            <label class="block text-xs tracking-brand uppercase text-muted mb-1.5" for="name">Name</label>
+            <input id="name" name="name" type="text" required class="w-full rounded-md border border-border bg-surface px-4 py-3 text-sm text-fg placeholder:text-muted/50 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Your name" />
+          </div>
+          <div>
+            <label class="block text-xs tracking-brand uppercase text-muted mb-1.5" for="email">Email</label>
+            <input id="email" name="email" type="email" required class="w-full rounded-md border border-border bg-surface px-4 py-3 text-sm text-fg placeholder:text-muted/50 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="you@example.com" />
+          </div>
+          <div>
+            <label class="block text-xs tracking-brand uppercase text-muted mb-1.5" for="intent">I’m here for</label>
+            <select id="intent" name="intent" class="w-full rounded-md border border-border bg-surface px-4 py-3 text-sm text-fg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
+              <option value="love">Love / the songs</option>
+              <option value="perform">I want to perform them</option>
+              <option value="collab">Collaboration</option>
+              <option value="press">Press / playlist</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs tracking-brand uppercase text-muted mb-1.5" for="message">Note (optional)</label>
+            <textarea id="message" name="message" rows="3" class="w-full rounded-md border border-border bg-surface px-4 py-3 text-sm text-fg placeholder:text-muted/50 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="A few words…"></textarea>
+          </div>
+          <button type="submit" class="w-full rounded-md bg-primary px-5 py-3 text-sm font-semibold text-bg hover:bg-fg transition-colors aura-glow">
+            Join the list
+          </button>
+          <p id="form-success" class="hidden text-sm text-primary">You’re on the list. Thank you — the door is open.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky player bar -->
+  <div id="player-bar" class="fixed bottom-0 inset-x-0 z-50 border-t border-border bg-bg/95 backdrop-blur-md">
+    <div class="mx-auto flex h-16 max-w-6xl items-center gap-4 px-4 md:px-6">
+      <img src="question-mark-touch.jpg" alt="" class="size-10 rounded object-cover" />
+      <div class="min-w-0 flex-1">
+        <p class="truncate text-sm font-medium">Yellow Aura</p>
+        <p class="truncate text-xs text-muted">Demo · sketch · <span class="play-count">0</span> plays</p>
+      </div>
+      <div class="hidden sm:flex items-end gap-0.5 h-6">
+        <span class="wave-bar w-1 bg-primary rounded-full" style="height:40%; animation-delay:0s"></span>
+        <span class="wave-bar w-1 bg-primary rounded-full" style="height:70%; animation-delay:0.1s"></span>
+        <span class="wave-bar w-1 bg-accent rounded-full" style="height:100%; animation-delay:0.2s"></span>
+        <span class="wave-bar w-1 bg-primary rounded-full" style="height:55%; animation-delay:0.3s"></span>
+        <span class="wave-bar w-1 bg-primary rounded-full" style="height:80%; animation-delay:0.4s"></span>
+      </div>
+      <button id="bar-play" class="inline-flex size-11 items-center justify-center rounded-full bg-primary text-bg hover:bg-fg transition-colors aura-glow shrink-0" aria-label="Play demo">
+        <svg class="size-4 ml-0.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <audio id="audio" preload="metadata"></audio>
+
+  <script>
+    const audio = document.getElementById('audio');
+    const playButtons = document.querySelectorAll('#header-play, #hero-play, #bar-play, .play-track');
+    let currentSrc = 'yellow-aura.mp3';
+    let isPlaying = false;
+    const PLAY_KEY = 'audiojoy-play-count';
+
+    function getPlayCount() {
+      return parseInt(localStorage.getItem(PLAY_KEY) || '0', 10);
+    }
+
+    function setPlayCount(n) {
+      localStorage.setItem(PLAY_KEY, String(n));
+      document.querySelectorAll('.play-count').forEach(el => {
+        el.textContent = n;
+      });
+    }
+
+    // Initialise displayed counts
+    setPlayCount(getPlayCount());
+
+    function setPlaying(state) {
+      isPlaying = state;
+      playButtons.forEach(btn => {
+        const icon = btn.querySelector('svg');
+        if (!icon) return;
+        if (state) {
+          icon.innerHTML = '<rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/>';
+        } else {
+          icon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+        }
+      });
+    }
+
+    function play(src) {
+      if (src && src !== currentSrc) {
+        currentSrc = src;
+        audio.src = src;
+      }
+      if (!audio.src) audio.src = currentSrc;
+      audio.play().then(() => {
+        setPlaying(true);
+        // Increment only on successful play start
+        setPlayCount(getPlayCount() + 1);
+      }).catch(() => {});
+    }
+
+    function pause() {
+      audio.pause();
+      setPlaying(false);
+    }
+
+    playButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const src = btn.dataset.src || currentSrc;
+        if (isPlaying && (!btn.dataset.src || btn.dataset.src === currentSrc)) {
+          pause();
+        } else {
+          play(src);
+        }
+      });
+    });
+
+    audio.addEventListener('ended', () => setPlaying(false));
+
+    // Form
+    document.getElementById('list-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = {
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim().toLowerCase(),
+        intent: document.getElementById('intent').value,
+        message: document.getElementById('message').value.trim(),
+        at: new Date().toISOString()
+      };
+      const key = 'audiojoy-notes';
+      const list = JSON.parse(localStorage.getItem(key) || '[]');
+      list.push(data);
+      localStorage.setItem(key, JSON.stringify(list));
+      document.getElementById('form-success').classList.remove('hidden');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
