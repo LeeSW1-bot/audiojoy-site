@@ -373,6 +373,7 @@
             Join the list
           </button>
           <p id="form-success" class="hidden text-sm text-primary">You’re on the list. Thank you — the door is open.</p>
+          <p id="form-error" class="hidden text-sm text-red-400">Something went wrong — please try again in a moment.</p>
         </form>
       </div>
     </section>
@@ -448,22 +449,30 @@
 
     audio.addEventListener('ended', () => setPlaying(false));
 
-    // Form
-    document.getElementById('list-form').addEventListener('submit', (e) => {
+    // Form — submits to Formspree so enquiries actually reach AudioJoy by email
+    const listForm = document.getElementById('list-form');
+    const formError = document.getElementById('form-error');
+    listForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      if (formError) formError.classList.add('hidden');
       const data = {
         name: document.getElementById('name').value.trim(),
         email: document.getElementById('email').value.trim().toLowerCase(),
         intent: document.getElementById('intent').value,
-        message: document.getElementById('message').value.trim(),
-        at: new Date().toISOString()
+        message: document.getElementById('message').value.trim()
       };
-      const key = 'audiojoy-notes';
-      const list = JSON.parse(localStorage.getItem(key) || '[]');
-      list.push(data);
-      localStorage.setItem(key, JSON.stringify(list));
-      document.getElementById('form-success').classList.remove('hidden');
-      e.target.reset();
+      try {
+        const res = await fetch('https://formspree.io/f/xppzzeod', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (!res.ok) throw new Error('Form submission failed');
+        document.getElementById('form-success').classList.remove('hidden');
+        listForm.reset();
+      } catch (err) {
+        if (formError) formError.classList.remove('hidden');
+      }
     });
   </script>
 </body>
