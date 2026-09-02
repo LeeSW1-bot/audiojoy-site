@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'self' https://formspree.io" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self' https://formspree.io; base-uri 'self'; object-src 'none'; form-action 'self' https://formspree.io" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="google-site-verification" content="r1H66RN078U0JwIiFOLY94wGPQe7j51mavKXHl9Q-VI" />
   <title>AudioJoy — UK Queer Pop Writing</title>
@@ -60,32 +60,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            bg: '#07080c',
-            surface: '#0e1016',
-            fg: '#f4f1ea',
-            muted: '#a8a29e',
-            primary: '#f5a623',
-            border: '#1c1f2a',
-            accent: '#ffd166'
-          },
-          fontFamily: {
-            sans: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            display: ['Syne', 'Outfit', 'sans-serif']
-          },
-          letterSpacing: {
-            brand: '0.22em',
-            display: '0.18em'
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="tailwind.css" />
   <style>
     :root { color-scheme: dark; }
     body { background: #07080c; color: #f4f1ea; }
