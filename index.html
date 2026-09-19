@@ -5,14 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AudioJoy — UK Queer Pop Writing</title>
   <meta name="description" content="AudioJoy — UK queer pop writing. New single Someone Somewhere, out 6 November." />
+  <meta name="theme-color" content="#07080c" />
   <link rel="canonical" href="https://audiojoy.uk/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://audiojoy.uk/" />
+  <meta property="og:title" content="AudioJoy" />
+  <meta property="og:description" content="UK queer pop writing. New single Someone Somewhere — out 6 November." />
   <meta property="og:image" content="https://audiojoy.uk/question-mark-touch.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://audiojoy.uk/question-mark-touch.jpg" />
+  <link rel="icon" type="image/png" href="logo-mark.png" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"MusicGroup","name":"AudioJoy","url":"https://audiojoy.uk/","genre":"Pop"}
+  {"@context":"https://schema.org","@type":"MusicGroup","name":"AudioJoy","url":"https://audiojoy.uk/","image":"https://audiojoy.uk/logo-mark.png","genre":"Pop","sameAs":["https://www.instagram.com/audiojoy.uk/","https://www.tiktok.com/@audiojoy.uk"],"track":[{"@type":"MusicRecording","name":"Someone Somewhere","byArtist":{"@type":"MusicGroup","name":"AudioJoy"},"url":"https://audiojoy.uk/#music"}]}
   </script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="tailwind.css" />
+  <style>
+    :root { color-scheme: dark; }
+    body { background:#07080c; color:#f4f1ea; }
+    .era { font-family: Syne, Outfit, sans-serif; font-weight:700; letter-spacing:-0.02em; }
+    .framed { border:1px solid #1c1f2a; }
+  </style>
 </head>
-<body>
-  <p>Use full file from artifacts — this push is a placeholder if size fails</p>
+<body class="bg-bg text-fg font-sans min-h-dvh">
+  <header class="fixed top-0 inset-x-0 z-40 border-b border-border/60 bg-bg/85 backdrop-blur-md">
+    <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
+      <a href="#"><img src="logo-mark.png" alt="AudioJoy" class="h-7 w-auto" /></a>
+      <nav class="hidden md:flex gap-6 text-sm text-muted">
+        <a href="#music">Music</a><a href="#aura">Yellow Aura</a><a href="#about">About</a><a href="#list">List</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="relative min-h-[100dvh] flex items-center pt-16">
+      <div class="absolute inset-0">
+        <img src="question-mark-touch.jpg" alt="Masked figure reaching toward a molten gold circuit question mark on a dusk clifftop" class="h-full w-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/70 to-bg/30"></div>
+      </div>
+      <div class="relative z-10 mx-auto w-full max-w-5xl px-4 py-20 text-center">
+        <p class="text-xs uppercase tracking-widest text-primary">UK · Queer pop writing</p>
+        <h1 class="sr-only">AudioJoy</h1>
+        <img src="logo-mark.png" alt="" class="mx-auto mt-8 w-full max-w-3xl" />
+        <p class="era mt-6 text-4xl md:text-6xl text-primary">Someone Somewhere</p>
+        <p class="mt-2 text-sm text-primary/90">New single · out 6 November</p>
+        <a href="#music" class="inline-flex mt-10 h-12 items-center rounded-md bg-primary px-6 text-sm font-semibold text-bg">The songs</a>
+      </div>
+    </section>
+    <section>
+      <img src="may-dreams-unfold.jpg" alt="Figure kneeling on a night cliff under a lighthouse beam" class="w-full max-h-[70vh] object-cover" />
+      <div class="mx-auto max-w-3xl px-4 py-16 text-center">
+        <p class="text-xs uppercase tracking-widest text-primary">The invitation</p>
+        <h2 class="era mt-3 text-4xl">May dreams unfold.</h2>
+      </div>
+    </section>
+    <section id="music" class="mx-auto max-w-6xl px-4 py-20">
+      <p class="text-xs uppercase tracking-widest text-primary">Listen</p>
+      <h2 class="mt-3 text-5xl">Music</h2>
+      <p class="mt-4 max-w-xl text-muted">New single <em>Someone Somewhere</em> lands 6 November. Finished songs coming to Spotify soon.</p>
+      <div class="mt-12 grid gap-10 md:grid-cols-2 md:items-center">
+        <img src="walk-doves.jpg" alt="Figure walking toward a gold question mark as doves rise" class="w-full object-cover aspect-[3/4] framed rounded-lg" />
+        <div>
+          <p class="text-xs uppercase text-primary">New single · 6 November</p>
+          <h3 class="mt-2 text-4xl">Someone Somewhere</h3>
+          <p class="mt-3 text-sm text-muted">Song 4 Pippa mix. After costs, proceeds to Orphans in Need — UK charity 1144812.</p>
+          <p class="mt-3 text-sm text-primary">Listen for free</p>
+        </div>
+      </div>
+      <div class="mt-16 grid gap-10 md:grid-cols-2 md:items-center">
+        <div>
+          <p class="text-xs uppercase text-primary">Released · 2023</p>
+          <h3 class="mt-2 text-4xl">Shook By The Look</h3>
+          <button class="play-track mt-8 h-11 rounded-md bg-primary px-5 text-sm text-bg" data-src="shook-sample.mp3">Sample</button>
+        </div>
+        <img src="shook.jpg" alt="Shook By The Look artwork" class="aspect-square w-full object-cover framed rounded-lg" />
+      </div>
+    </section>
+    <section id="aura" class="mx-auto max-w-6xl px-4 py-20">
+      <p class="text-xs uppercase tracking-widest text-primary">Forthcoming · 2026</p>
+      <h2 class="era mt-3 text-5xl text-primary">Yellow Aura</h2>
+      <p class="mt-4 text-sm text-primary">Listen for free</p>
+    </section>
+    <section id="about" class="border-t border-border">
+      <div class="mx-auto grid max-w-6xl gap-10 px-4 py-20 md:grid-cols-2">
+        <div>
+          <p class="text-xs uppercase tracking-widest text-primary">The writer</p>
+          <img src="logo-mark.png" alt="" class="mt-3 w-full max-w-sm" />
+        </div>
+        <img src="dove-phone-ig.jpg" alt="Faceless figure holding a phone with a gold dove" class="w-full object-cover aspect-[3/4] framed rounded-lg" />
+      </div>
+    </section>
+    <section id="list" class="mx-auto max-w-6xl px-4 py-20">
+      <h2 class="text-4xl">If they find a home.</h2>
+      <form id="list-form" class="mt-8 space-y-4 max-w-md">
+        <input id="name" name="name" type="text" required placeholder="Your name" class="w-full rounded-md border border-border bg-surface px-4 py-3 text-sm" />
+        <input id="email" name="email" type="email" required placeholder="you@example.com" class="w-full rounded-md border border-border bg-surface px-4 py-3 text-sm" />
+        <select id="intent" name="intent" class="w-full rounded-md border border-border bg-surface px-4 py-3 text-sm">
+          <option value="love">Love / the songs</option>
+          <option value="perform">I want to perform them</option>
+          <option value="collab">Collaboration</option>
+          <option value="press">Press / playlist</option>
+        </select>
+        <textarea id="message" name="message" rows="3" class="w-full rounded-md border border-border bg-surface px-4 py-3 text-sm"></textarea>
+        <button type="submit" class="w-full rounded-md bg-primary px-5 py-3 text-sm font-semibold text-bg">Join the list</button>
+        <p id="form-success" class="hidden text-sm text-primary">You’re on the list. Thank you.</p>
+        <p id="form-error" class="hidden text-sm text-red-400">Something went wrong.</p>
+      </form>
+    </section>
+  </main>
+  <audio id="audio" preload="metadata"></audio>
+  <script>
+    const audio = document.getElementById('audio');
+    document.querySelectorAll('.play-track').forEach(btn => {
+      btn.addEventListener('click', () => { audio.src = btn.dataset.src; audio.play().catch(()=>{}); });
+    });
+    const listForm = document.getElementById('list-form');
+    listForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = {
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim().toLowerCase(),
+        intent: document.getElementById('intent').value,
+        message: document.getElementById('message').value.trim()
+      };
+      try {
+        const res = await fetch('https://formspree.io/f/xppzzeod', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (!res.ok) throw new Error('fail');
+        document.getElementById('form-success').classList.remove('hidden');
+        listForm.reset();
+      } catch (err) {
+        document.getElementById('form-error').classList.remove('hidden');
+      }
+    });
+  </script>
 </body>
 </html>
