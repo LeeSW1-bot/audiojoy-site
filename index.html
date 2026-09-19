@@ -61,17 +61,74 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="tailwind.css" />
+  <style>
+    :root { color-scheme: dark; }
+    body { background: #07080c; color: #f4f1ea; }
+    .era { font-family: Syne, Outfit, sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+  </style>
 </head>
 <body class="bg-bg text-fg font-sans min-h-dvh flex flex-col">
+  <header class="fixed top-0 inset-x-0 z-40 border-b border-border/60 bg-bg/85 backdrop-blur-md">
+    <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 md:px-6">
+      <a href="#" class="flex items-center gap-2"><img src="logo-mark.png" alt="AudioJoy" class="h-7 w-auto" /></a>
+      <nav class="hidden items-center gap-6 text-sm font-medium text-muted md:flex">
+        <a href="#music" class="hover:text-primary transition-colors">Music</a>
+        <a href="#aura" class="hover:text-primary transition-colors">Yellow Aura</a>
+        <a href="#about" class="hover:text-primary transition-colors">About</a>
+        <a href="#list" class="hover:text-primary transition-colors">List</a>
+      </nav>
+    </div>
+  </header>
   <main id="main" class="flex-1">
     <section class="relative min-h-[100dvh] flex items-center pt-16 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="question-mark-touch.jpg" alt="Masked figure in sequin jacket reaching toward a molten gold circuit question mark on a dusk clifftop" class="h-full w-full object-cover object-center opacity-90" />
+        <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/70 to-bg/30"></div>
+      </div>
       <div class="relative z-10 mx-auto w-full max-w-5xl px-4 py-20 text-center md:px-6">
         <p class="text-xs font-medium tracking-brand uppercase text-primary">UK · Queer pop writing</p>
         <h1 class="sr-only">AudioJoy</h1>
         <img src="logo-mark.png" alt="" class="relative mx-auto mt-8 h-auto w-full max-w-3xl drop-shadow-2xl" />
         <p class="era mt-6 text-4xl md:text-6xl text-primary">Someone Somewhere</p>
+        <p class="mx-auto mt-2 text-sm tracking-wide text-primary/90">Uplifting queer pop · how high is the sky?</p>
+        <p class="mx-auto mt-6 max-w-lg text-base leading-relaxed text-fg/90">A murmuration of birds, a burst of love, and a question about how high the sky really goes. I write. Someone — or something — braver sings.</p>
+        <div class="mt-10"><a href="#music" class="inline-flex h-12 items-center gap-2 rounded-md bg-primary px-6 text-sm font-semibold text-bg">The songs</a></div>
       </div>
     </section>
+    <section id="music" class="mx-auto max-w-6xl px-4 py-20 md:px-6">
+      <p class="text-xs tracking-brand uppercase text-primary">Listen</p>
+      <h2 class="mt-3 font-display text-5xl md:text-7xl">Music</h2>
+      <p class="mt-4 max-w-xl text-base leading-relaxed text-muted">A fresh sketch, <em>Someone Somewhere</em>, sits alongside one co-write that Matt Pop turned into an anthem of sass. Stream <em>Shook By The Look</em>, written with Kieran and Collin.</p>
+      <p class="mt-3 text-sm text-muted">Finished songs coming to Spotify soon.</p>
+      <div class="mt-14 grid gap-10 md:grid-cols-2 md:items-center">
+        <div class="relative overflow-hidden rounded-lg framed"><img src="og.jpg" alt="Someone Somewhere artwork" class="aspect-square w-full object-cover" /></div>
+        <div>
+          <p class="text-xs tracking-display uppercase text-primary">Demo · sketch · 2026</p>
+          <h3 class="mt-2 font-display text-4xl md:text-5xl">Someone Somewhere</h3>
+          <p class="mt-8 text-sm text-muted">Finished version coming to Spotify soon.</p>
+        </div>
+      </div>
+      <div class="mt-20 grid gap-10 md:grid-cols-2 md:items-center">
+        <div>
+          <p class="text-xs tracking-display uppercase text-primary">Released · 2023</p>
+          <h3 class="mt-2 font-display text-4xl md:text-5xl">Shook By The Look</h3>
+          <div class="mt-8"><button class="play-track inline-flex h-11 items-center gap-2 rounded-md bg-primary px-5 text-sm font-medium text-bg" data-src="shook-sample.mp3">Sample</button></div>
+        </div>
+        <div class="relative overflow-hidden rounded-lg framed"><img src="shook.jpg" alt="Shook By The Look artwork" class="aspect-square w-full object-cover" /></div>
+      </div>
+    </section>
+    <section id="aura" class="mx-auto max-w-6xl px-4 py-20"><h2 class="era mt-3 text-5xl text-primary">Yellow Aura</h2></section>
+    <section id="about" class="border-t border-border"><div class="mx-auto max-w-6xl px-4 py-20"><p class="text-xs tracking-brand uppercase text-primary">The writer</p></div></section>
+    <section id="list" class="mx-auto max-w-6xl px-4 py-20"><h2 class="font-display text-4xl">If they find a home.</h2></section>
   </main>
+  <audio id="audio" preload="metadata"></audio>
+  <script>
+    const audio = document.getElementById('audio');
+    let currentSrc = 'shook-sample.mp3';
+    document.querySelectorAll('.play-track').forEach(btn => {
+      btn.addEventListener('click', () => { audio.src = btn.dataset.src || currentSrc; audio.play().catch(() => {}); });
+    });
+  </script>
+  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3eeaa1c014df41e59810062ff7e840b5"}'></script>
 </body>
 </html>
