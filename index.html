@@ -54,8 +54,221 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="tailwind.css" />
+  <style>
+    :root { color-scheme: dark; }
+    body { background: #07080c; color: #f4f1ea; }
+    .era { font-family: Syne, Outfit, sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+    .aura-glow { box-shadow: 0 0 40px -8px rgba(245,166,35,0.55); }
+    .gold-rule { height: 1px; background: linear-gradient(90deg, transparent, #f5a62355, transparent); }
+    .framed { border: 1px solid #1c1f2a; box-shadow: 0 20px 50px -20px rgba(0,0,0,0.7); }
+    .ticker-track { animation: ticker 28s linear infinite; }
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .wave-bar { animation: wave 1.1s ease-in-out infinite alternate; }
+    @keyframes wave {
+      from { transform: scaleY(0.35); }
+      to { transform: scaleY(1); }
+    }
+    .img-veil::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, #07080c 0%, transparent 45%);
+      pointer-events: none;
+    }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .hero-kenburns { animation: kenburns 24s ease-in-out infinite alternate; will-change: transform; }
+    @keyframes kenburns {
+      0% { transform: scale(1) translate(0, 0); }
+      100% { transform: scale(1.09) translate(-1.5%, -1%); }
+    }
+    .hero-glow {
+      position: absolute;
+      left: 50%; top: 42%;
+      width: 640px; height: 640px;
+      max-width: 90vw;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(245,166,35,0.38) 0%, rgba(245,166,35,0) 70%);
+      filter: blur(6px);
+      animation: glow-drift 13s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    @keyframes glow-drift {
+      0% { transform: translate(-54%, -53%) scale(1); }
+      100% { transform: translate(-46%, -47%) scale(1.18); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .hero-kenburns { animation: none; }
+      .hero-glow { animation: none; }
+    }
+  </style>
 </head>
 <body class="bg-bg text-fg font-sans min-h-dvh flex flex-col">
-  <p>INCOMPLETE</p>
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-primary focus:px-4 focus:py-2 focus:text-bg">Skip to content</a>
+  <header class="fixed top-0 inset-x-0 z-40 border-b border-border/60 bg-bg/85 backdrop-blur-md">
+    <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 md:px-6">
+      <a href="#" class="flex items-center gap-2">
+        <img src="logo-mark.png" alt="AudioJoy" class="h-7 w-auto" decoding="async" />
+      </a>
+      <div class="flex items-center gap-5 md:gap-6">
+        <nav class="hidden items-center gap-6 text-sm font-medium text-muted md:flex">
+          <a href="#music" class="hover:text-primary transition-colors">Music</a>
+          <a href="#aura" class="hover:text-primary transition-colors">Yellow Aura</a>
+          <a href="#about" class="hover:text-primary transition-colors">About</a>
+          <a href="#list" class="hover:text-primary transition-colors">List</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="flex-1">
+    <section class="relative min-h-[100dvh] flex items-center pt-16 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="question-mark-touch.jpg" alt="Masked figure in sequin jacket reaching toward a molten gold circuit question mark on a dusk clifftop" class="hero-kenburns h-full w-full object-cover object-center opacity-90" fetchpriority="high" decoding="async" />
+        <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/70 to-bg/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-bg/80 via-transparent to-bg/40"></div>
+      </div>
+      <div class="relative z-10 mx-auto w-full max-w-5xl px-4 py-20 text-center md:px-6">
+        <p class="text-xs font-medium tracking-brand uppercase text-primary">UK · Queer pop writing</p>
+        <h1 class="sr-only">AudioJoy</h1>
+        <div class="hero-glow"></div>
+        <img src="logo-mark.png" alt="" class="relative mx-auto mt-8 h-auto w-full max-w-3xl drop-shadow-2xl" decoding="async" />
+        <p class="era mt-6 text-4xl md:text-6xl text-primary">Someone Somewhere</p>
+        <p class="mx-auto mt-2 text-sm tracking-wide text-primary/90">New single · out 6 November</p>
+        <p class="mx-auto mt-6 max-w-lg text-base leading-relaxed text-fg/90">A devotional house record for anyone who's given everything to someone still looking past them. Streaming everywhere 6 November.</p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <a href="#music" class="inline-flex h-12 items-center gap-2 rounded-md bg-primary px-6 text-sm font-semibold text-bg hover:bg-fg transition-colors aura-glow">The songs</a>
+        </div>
+      </div>
+    </section>
+    <section id="music" class="mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28">
+      <p class="text-xs tracking-brand uppercase text-primary">Listen</p>
+      <h2 class="mt-3 font-display text-5xl md:text-7xl">Music</h2>
+      <p class="mt-4 max-w-xl text-base leading-relaxed text-muted">New single <em>Someone Somewhere</em> lands 6 November. Until then, here's the 2023 co-write Matt Pop turned into an anthem of sass: <em>Shook By The Look</em>, written with Kieran and Collin.</p>
+      <p class="mt-3 text-sm text-muted"><em>Someone Somewhere</em> streaming everywhere 6 November.</p>
+      <div class="reveal mt-20 grid gap-10 md:grid-cols-2 md:items-center">
+        <div class="order-2 md:order-1">
+          <p class="text-xs tracking-display uppercase text-primary">Released · 2023</p>
+          <h3 class="mt-2 font-display text-4xl md:text-5xl">Shook By The Look</h3>
+          <p class="mt-1 text-primary">An anthem of sass</p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <button class="play-track inline-flex h-11 items-center gap-2 rounded-md bg-primary px-5 text-sm font-medium text-bg" data-src="shook-sample.mp3">Sample</button>
+            <a href="https://music.apple.com/us/album/shook-by-the-look-matt-pop-radio-remix/1695899288?i=1695899289" target="_blank" rel="noopener" class="inline-flex h-11 items-center gap-2 rounded-md border border-border px-5 text-sm font-medium text-fg">Apple Music · Radio Mix</a>
+            <a href="https://open.spotify.com/artist/2hSwuSFQrPmJkJn00JSye5" target="_blank" rel="noopener" class="inline-flex h-11 items-center gap-2 rounded-md border border-border px-5 text-sm font-medium text-fg">Spotify</a>
+          </div>
+        </div>
+        <div class="order-1 md:order-2 relative overflow-hidden rounded-lg framed">
+          <img src="shook.jpg" alt="Shook By The Look artwork" class="aspect-square w-full object-cover" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </section>
+    <section id="aura" class="mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28">
+      <p class="text-xs tracking-brand uppercase text-primary">Forthcoming · 2026</p>
+      <h2 class="era mt-3 text-5xl md:text-7xl text-primary">Yellow Aura</h2>
+    </section>
+    <section id="about" class="border-t border-border bg-surface/30">
+      <div class="mx-auto max-w-6xl px-4 py-20 md:px-6">
+        <p class="text-xs tracking-brand uppercase text-primary">The writer</p>
+        <img src="logo-mark.png" alt="" class="mt-3 h-auto w-full max-w-sm" loading="lazy" decoding="async" />
+      </div>
+    </section>
+    <section id="list" class="mx-auto max-w-6xl px-4 py-20 md:px-6">
+      <h2 class="mt-3 font-display text-4xl md:text-5xl">If they find a home.</h2>
+      <form id="list-form" class="mt-8 space-y-4 max-w-md">
+        <input id="name" name="name" type="text" required placeholder="Your name" class="w-full rounded-md border border-border bg-surface px-4 py-3 text-sm" />
+        <input id="email" name="email" type="email" required placeholder="you@example.com" class="w-full rounded-md border border-border bg-surface px-4 py-3 text-sm" />
+        <select id="intent" name="intent" class="w-full rounded-md border border-border bg-surface px-4 py-3 text-sm">
+          <option value="love">Love / the songs</option>
+          <option value="perform">I want to perform them</option>
+          <option value="collab">Collaboration</option>
+          <option value="press">Press / playlist</option>
+        </select>
+        <textarea id="message" name="message" rows="3" class="w-full rounded-md border border-border bg-surface px-4 py-3 text-sm"></textarea>
+        <button type="submit" class="w-full rounded-md bg-primary px-5 py-3 text-sm font-semibold text-bg">Join the list</button>
+        <p id="form-success" class="hidden text-sm text-primary">You’re on the list. Thank you.</p>
+        <p id="form-error" class="hidden text-sm text-red-400">Something went wrong — please try again in a moment.</p>
+      </form>
+    </section>
+  </main>
+  <div id="player-bar" class="fixed bottom-0 inset-x-0 z-50 border-t border-border bg-bg/95 backdrop-blur-md">
+    <div class="mx-auto flex h-16 max-w-6xl items-center gap-4 px-4 md:px-6">
+      <img src="shook.jpg" alt="" class="size-10 rounded object-cover" decoding="async" />
+      <div class="min-w-0 flex-1">
+        <p class="truncate text-sm font-medium">Shook By The Look</p>
+        <p class="truncate text-xs text-muted">2023 single</p>
+      </div>
+      <button id="bar-play" class="inline-flex size-11 items-center justify-center rounded-full bg-primary text-bg" aria-label="Play demo">
+        <svg class="size-4 ml-0.5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+    </div>
+  </div>
+  <audio id="audio" preload="metadata"></audio>
+  <script>
+    const audio = document.getElementById('audio');
+    const playButtons = document.querySelectorAll('#bar-play, .play-track');
+    let currentSrc = 'shook-sample.mp3';
+    let isPlaying = false;
+    function setPlaying(state) {
+      isPlaying = state;
+      playButtons.forEach(btn => {
+        const icon = btn.querySelector('svg');
+        if (!icon) return;
+        icon.innerHTML = state ? '<rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/>' : '<path d="M8 5v14l11-7z"/>';
+      });
+    }
+    function play(src) {
+      if (src && src !== currentSrc) { currentSrc = src; audio.src = src; }
+      if (!audio.src) audio.src = currentSrc;
+      audio.play().then(() => setPlaying(true)).catch(() => {});
+    }
+    function pause() { audio.pause(); setPlaying(false); }
+    playButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const src = btn.dataset.src || currentSrc;
+        if (isPlaying && (!btn.dataset.src || btn.dataset.src === currentSrc)) pause();
+        else play(src);
+      });
+    });
+    audio.addEventListener('ended', () => setPlaying(false));
+    const listForm = document.getElementById('list-form');
+    const formError = document.getElementById('form-error');
+    listForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (formError) formError.classList.add('hidden');
+      const data = {
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim().toLowerCase(),
+        intent: document.getElementById('intent').value,
+        message: document.getElementById('message').value.trim()
+      };
+      try {
+        const res = await fetch('https://formspree.io/f/xppzzeod', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (!res.ok) throw new Error('Form submission failed');
+        document.getElementById('form-success').classList.remove('hidden');
+        listForm.reset();
+      } catch (err) {
+        if (formError) formError.classList.remove('hidden');
+      }
+    });
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    }
+  </script>
+  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3eeaa1c014df41e59810062ff7e840b5"}'></script>
 </body>
 </html>
