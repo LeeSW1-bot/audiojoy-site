@@ -30,18 +30,12 @@
     .aura-glow { box-shadow: 0 0 40px -8px rgba(245,166,35,0.55); }
     .gold-rule { height: 1px; background: linear-gradient(90deg, transparent, #f5a62355, transparent); }
     .framed { border: 1px solid #1c1f2a; box-shadow: 0 20px 50px -20px rgba(0,0,0,0.7); }
-    .ticker-track { animation: ticker 28s linear infinite; }
-    @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .wave-bar { animation: wave 1.1s ease-in-out infinite alternate; }
-    @keyframes wave { from { transform: scaleY(0.35); } to { transform: scaleY(1); } }
-    .img-veil::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, #07080c 0%, transparent 45%); pointer-events: none; }
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
-    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .reveal { opacity: 1; transform: none; }
     .hero-kenburns { animation: kenburns 24s ease-in-out infinite alternate; will-change: transform; }
     @keyframes kenburns { 0% { transform: scale(1) translate(0, 0); } 100% { transform: scale(1.09) translate(-1.5%, -1%); } }
     .hero-glow { position: absolute; left: 50%; top: 42%; width: 640px; height: 640px; max-width: 90vw; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(245,166,35,0.38) 0%, rgba(245,166,35,0) 70%); filter: blur(6px); animation: glow-drift 13s ease-in-out infinite alternate; pointer-events: none; }
     @keyframes glow-drift { 0% { transform: translate(-54%, -53%) scale(1); } 100% { transform: translate(-46%, -47%) scale(1.18); } }
-    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .hero-kenburns { animation: none; } .hero-glow { animation: none; } }
+    @media (prefers-reduced-motion: reduce) { .hero-kenburns { animation: none; } .hero-glow { animation: none; } }
   </style>
 </head>
 <body class="bg-bg text-fg font-sans min-h-dvh flex flex-col">
@@ -135,8 +129,6 @@
     const audio = document.getElementById('audio');
     const playButtons = document.querySelectorAll('#bar-play, .play-track');
     let currentSrc = 'shook-sample.mp3';
-    let isPlaying = false;
-    function setPlaying(state) { isPlaying = state; }
     playButtons.forEach(btn => btn.addEventListener('click', () => { const src = btn.dataset.src || currentSrc; audio.src = src; audio.play().catch(()=>{}); }));
     const listForm = document.getElementById('list-form');
     listForm.addEventListener('submit', async (e) => {
