@@ -28,81 +28,83 @@
     body { background: #07080c; color: #f4f1ea; }
     .era { font-family: Syne, Outfit, sans-serif; font-weight: 700; letter-spacing: -0.02em; }
     .aura-glow { box-shadow: 0 0 40px -8px rgba(245,166,35,0.55); }
-    .gold-rule { height: 1px; background: linear-gradient(90deg, transparent, #f5a62355, transparent); }
     .framed { border: 1px solid #1c1f2a; box-shadow: 0 20px 50px -20px rgba(0,0,0,0.7); }
     .reveal { opacity: 1; transform: none; }
     .hero-kenburns { animation: kenburns 24s ease-in-out infinite alternate; will-change: transform; }
     @keyframes kenburns { 0% { transform: scale(1) translate(0, 0); } 100% { transform: scale(1.09) translate(-1.5%, -1%); } }
     .hero-glow { position: absolute; left: 50%; top: 42%; width: 640px; height: 640px; max-width: 90vw; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(245,166,35,0.38) 0%, rgba(245,166,35,0) 70%); filter: blur(6px); animation: glow-drift 13s ease-in-out infinite alternate; pointer-events: none; }
     @keyframes glow-drift { 0% { transform: translate(-54%, -53%) scale(1); } 100% { transform: translate(-46%, -47%) scale(1.18); } }
-    @media (prefers-reduced-motion: reduce) { .hero-kenburns { animation: none; } .hero-glow { animation: none; } }
   </style>
 </head>
 <body class="bg-bg text-fg font-sans min-h-dvh flex flex-col">
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-primary focus:px-4 focus:py-2 focus:text-bg">Skip to content</a>
   <header class="fixed top-0 inset-x-0 z-40 border-b border-border/60 bg-bg/85 backdrop-blur-md">
     <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 md:px-6">
-      <a href="#" class="flex items-center gap-2"><img src="logo-mark.png" alt="AudioJoy" class="h-7 w-auto" decoding="async" /></a>
-      <div class="flex items-center gap-5 md:gap-6">
-        <nav class="hidden items-center gap-6 text-sm font-medium text-muted md:flex">
-          <a href="#music" class="hover:text-primary transition-colors">Music</a>
-          <a href="#aura" class="hover:text-primary transition-colors">Yellow Aura</a>
-          <a href="#about" class="hover:text-primary transition-colors">About</a>
-          <a href="#list" class="hover:text-primary transition-colors">List</a>
-        </nav>
-      </div>
+      <a href="#" class="flex items-center gap-2"><img src="logo-mark.png" alt="AudioJoy" class="h-7 w-auto" /></a>
+      <nav class="hidden items-center gap-6 text-sm font-medium text-muted md:flex">
+        <a href="#music">Music</a><a href="#aura">Yellow Aura</a><a href="#about">About</a><a href="#list">List</a>
+      </nav>
     </div>
   </header>
   <main id="main" class="flex-1">
     <section class="relative min-h-[100dvh] flex items-center pt-16 overflow-hidden">
       <div class="absolute inset-0">
-        <img src="question-mark-touch.jpg" alt="Masked figure in sequin jacket reaching toward a molten gold circuit question mark on a dusk clifftop" class="hero-kenburns h-full w-full object-cover object-center opacity-90" fetchpriority="high" decoding="async" />
+        <img src="question-mark-touch.jpg" alt="" class="hero-kenburns h-full w-full object-cover object-center opacity-90" fetchpriority="high" />
         <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/70 to-bg/30"></div>
       </div>
-      <div class="relative z-10 mx-auto w-full max-w-5xl px-4 py-20 text-center md:px-6">
+      <div class="relative z-10 mx-auto w-full max-w-5xl px-4 py-20 text-center">
         <p class="text-xs font-medium tracking-brand uppercase text-primary">UK · Queer pop writing</p>
-        <h1 class="sr-only">AudioJoy</h1>
-        <div class="hero-glow"></div>
-        <img src="logo-mark.png" alt="" class="relative mx-auto mt-8 h-auto w-full max-w-3xl drop-shadow-2xl" decoding="async" />
+        <img src="logo-mark.png" alt="" class="relative mx-auto mt-8 h-auto w-full max-w-3xl" />
         <p class="era mt-6 text-4xl md:text-6xl text-primary">Someone Somewhere</p>
-        <p class="mx-auto mt-2 text-sm tracking-wide text-primary/90">New single · out 6 November</p>
-        <p class="mx-auto mt-6 max-w-lg text-base leading-relaxed text-fg/90">An elegant record about loving someone who hasn't turned round yet. Out everywhere, with club mixes.</p>
-        <div class="mt-10"><a href="#music" class="inline-flex h-12 items-center gap-2 rounded-md bg-primary px-6 text-sm font-semibold text-bg hover:bg-fg transition-colors aura-glow">The songs</a></div>
+        <p class="mx-auto mt-2 text-sm text-primary/90">New single · out 6 November</p>
+        <p class="mx-auto mt-6 max-w-lg text-base text-fg/90">An elegant record about loving someone who hasn't turned round yet. Out everywhere, with club mixes.</p>
+        <div class="mt-10"><a href="#music" class="inline-flex h-12 items-center rounded-md bg-primary px-6 text-sm font-semibold text-bg aura-glow">The songs</a></div>
       </div>
     </section>
-    <section id="music" class="mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28">
+    <section id="music" class="mx-auto max-w-6xl px-4 py-20">
       <p class="text-xs tracking-brand uppercase text-primary">Listen</p>
-      <h2 class="mt-3 font-display text-5xl md:text-7xl">Music</h2>
-      <div class="reveal mt-20 grid gap-10 md:grid-cols-2 md:items-center">
-        <div class="relative overflow-hidden rounded-lg framed"><img src="question-mark-touch.jpg" alt="" class="aspect-square w-full object-cover" loading="lazy" /></div>
+      <h2 class="mt-3 font-display text-5xl">Music</h2>
+      <div class="reveal mt-16 grid gap-10 md:grid-cols-2 md:items-center">
+        <div class="relative overflow-hidden rounded-lg framed"><img src="question-mark-touch.jpg" alt="" class="aspect-square w-full object-cover" /></div>
         <div>
-          <p class="text-xs tracking-display uppercase text-primary">New single · Out 6 November</p>
+          <p class="text-xs uppercase text-primary">New single · Out 6 November</p>
           <h3 class="mt-2 font-display text-4xl">Someone Somewhere</h3>
-          <p class="mt-4 text-base leading-relaxed text-fg">Powerhouse vocalist announced soon.</p>
-          <div class="mt-6 rounded-lg border border-border bg-surface/50 p-5"><p class="text-sm leading-relaxed text-fg">A charity beneficiary for the Song 4 Pippa mix is awaiting confirmation.</p></div>
+          <p class="mt-4 text-base">Powerhouse vocalist announced soon.</p>
+          <div class="mt-6 rounded-lg border border-border p-5"><p class="text-sm">A charity beneficiary for the Song 4 Pippa mix is awaiting confirmation.</p></div>
         </div>
       </div>
-      <div class="reveal mt-20 grid gap-10 md:grid-cols-2 md:items-center">
+      <div class="reveal mt-16 grid gap-10 md:grid-cols-2 md:items-center">
         <div class="order-2 md:order-1">
-          <p class="text-xs tracking-display uppercase text-primary">Released · 2023</p>
+          <p class="text-xs uppercase text-primary">Released · 2023</p>
           <h3 class="mt-2 font-display text-4xl">Shook By The Look</h3>
           <p class="mt-1 text-primary">An anthem of sass</p>
-          <button class="play-track mt-8 inline-flex h-11 items-center gap-2 rounded-md bg-primary px-5 text-sm font-medium text-bg" data-src="shook-sample.mp3">Sample</button>
+          <p class="mt-5 text-base leading-relaxed text-muted">A co-write, and the only song the three of us made together. Kieran created the original music, wrote a verse, and sang backing vocals. I wrote the other verses and the chorus, and sang lead. Collin brought a brilliant rap, backing vocals, and the arranger's ear. Matt Pop turned the tune into a bright, spangly anthem of sass — with a sparkle borrowed, in part, from Pippa Dee.</p>
+          <ul class="mt-5 space-y-1 text-sm text-muted">
+            <li><span class="text-fg">Kieran</span> — original music, verse, backing vocals</li>
+            <li><span class="text-fg">AudioJoy</span> — lead vocals, verses, chorus</li>
+            <li><span class="text-fg">Collin</span> — rap, backing vocals, arrangement</li>
+            <li><span class="text-fg">Matt Pop</span> — the bright, spangly anthem</li>
+          </ul>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <button class="play-track inline-flex h-11 items-center rounded-md bg-primary px-5 text-sm font-medium text-bg" data-src="shook-sample.mp3">Sample</button>
+            <a href="https://music.apple.com/us/album/shook-by-the-look-matt-pop-radio-remix/1695899288?i=1695899289" target="_blank" rel="noopener" class="inline-flex h-11 items-center rounded-md border border-border px-5 text-sm">Apple Music · Radio Mix</a>
+            <a href="https://music.apple.com/us/album/shook-by-the-look-matt-pop-extended-dance-remix-single/1695892802" target="_blank" rel="noopener" class="inline-flex h-11 items-center rounded-md border border-border px-5 text-sm">Apple Music · Extended Mix</a>
+            <a href="https://open.spotify.com/artist/2hSwuSFQrPmJkJn00JSye5" target="_blank" rel="noopener" class="inline-flex h-11 items-center rounded-md border border-border px-5 text-sm">Spotify</a>
+          </div>
         </div>
         <figure class="order-1 md:order-2">
-          <div class="relative overflow-hidden rounded-lg framed"><img src="shook.jpg" alt="Shook By The Look artwork" class="aspect-square w-full object-cover" loading="lazy" decoding="async" /></div>
+          <div class="relative overflow-hidden rounded-lg framed"><img src="shook.jpg" alt="Shook By The Look artwork" class="aspect-square w-full object-cover" /></div>
           <figcaption class="mt-3 text-xs leading-relaxed text-muted">Photo, hair and makeup by Darren Evans. The one time I wore makeup.</figcaption>
         </figure>
       </div>
     </section>
     <section id="aura" class="mx-auto max-w-6xl px-4 py-20">
-      <h2 class="era mt-3 text-5xl text-primary">Yellow Aura</h2>
-      <p class="mt-4 max-w-xl text-base leading-relaxed text-fg">The next suite, in gold. Nothing on it is finished, and nobody has sung it yet.</p>
+      <h2 class="era text-5xl text-primary">Yellow Aura</h2>
+      <p class="mt-4 max-w-xl">The next suite, in gold. Nothing on it is finished, and nobody has sung it yet.</p>
     </section>
     <section id="about" class="mx-auto max-w-6xl px-4 py-20 grid gap-10 md:grid-cols-2">
       <div>
-        <p class="text-xs tracking-brand uppercase text-primary">The writer</p>
-        <img src="logo-mark.png" alt="" class="mt-3 h-auto w-full max-w-sm" />
+        <p class="text-xs uppercase text-primary">The writer</p>
+        <img src="logo-mark.png" alt="" class="mt-3 w-full max-w-sm" />
       </div>
       <img src="dove-phone-ig.jpg" alt="" class="w-full object-cover aspect-[3/4]" />
     </section>
@@ -121,17 +123,14 @@
     <div class="mx-auto flex h-16 max-w-6xl items-center gap-4 px-4">
       <img src="shook.jpg" alt="" class="size-10 rounded object-cover" />
       <div class="min-w-0 flex-1"><p class="truncate text-sm font-medium">Shook By The Look</p></div>
-      <button id="bar-play" class="inline-flex size-11 items-center justify-center rounded-full bg-primary text-bg" aria-label="Play demo"><svg class="size-4" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+      <button id="bar-play" class="inline-flex size-11 items-center justify-center rounded-full bg-primary text-bg" aria-label="Play"><svg class="size-4" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
     </div>
   </div>
   <audio id="audio" preload="metadata"></audio>
   <script>
     const audio = document.getElementById('audio');
-    const playButtons = document.querySelectorAll('#bar-play, .play-track');
-    let currentSrc = 'shook-sample.mp3';
-    playButtons.forEach(btn => btn.addEventListener('click', () => { const src = btn.dataset.src || currentSrc; audio.src = src; audio.play().catch(()=>{}); }));
-    const listForm = document.getElementById('list-form');
-    listForm.addEventListener('submit', async (e) => {
+    document.querySelectorAll('#bar-play, .play-track').forEach(btn => btn.addEventListener('click', () => { audio.src = btn.dataset.src || 'shook-sample.mp3'; audio.play().catch(()=>{}); }));
+    document.getElementById('list-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       const data = { name: document.getElementById('name').value.trim(), email: document.getElementById('email').value.trim().toLowerCase() };
       try {
