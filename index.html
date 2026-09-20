@@ -1,2 +1,123 @@
 <!DOCTYPE html>
-<!-- see artifacts/index-live.html -->
+<html lang="en" class="antialiased">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self' https://formspree.io https://cloudflareinsights.com https://static.cloudflareinsights.com; base-uri 'self'; object-src 'none'; form-action 'self' https://formspree.io; frame-ancestors 'none'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="google-site-verification" content="r1H66RN078U0JwIiFOLY94wGPQe7j51mavKXHl9Q-VI" />
+  <title>AudioJoy — UK Queer Pop Writing</title>
+  <meta name="description" content="AudioJoy — UK queer pop writing. New single Someone Somewhere, out 6 November." />
+  <meta name="theme-color" content="#07080c" />
+  <link rel="canonical" href="https://audiojoy.uk/" />
+  <link rel="icon" type="image/png" href="logo-mark.png" />
+  <link rel="stylesheet" href="tailwind.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { color-scheme: dark; }
+    body { background:#07080c; color:#f4f1ea; margin:0; font-family: Outfit, sans-serif; }
+    .era { font-family: Syne, Outfit, sans-serif; font-weight:700; }
+  </style>
+</head>
+<body class="bg-bg text-fg min-h-dvh">
+  <header class="fixed top-0 inset-x-0 z-40 border-b border-border/60 bg-bg/85">
+    <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
+      <a href="#"><img src="logo-mark.png" alt="AudioJoy" class="h-7 w-auto" /></a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#music">Music</a><a href="#aura">Yellow Aura</a><a href="#about">About</a><a href="#list">List</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="relative min-h-[100dvh] flex items-center pt-16">
+      <div class="absolute inset-0">
+        <img src="question-mark-touch.jpg" alt="" class="h-full w-full object-cover" />
+        <div class="absolute inset-0" style="background:linear-gradient(to top,#07080c,rgba(7,8,12,.7),rgba(7,8,12,.3))"></div>
+      </div>
+      <div class="relative z-10 mx-auto w-full max-w-5xl px-4 py-20 text-center">
+        <p class="text-xs uppercase tracking-widest" style="color:#f5a623">UK · Queer pop writing</p>
+        <img src="logo-mark.png" alt="AudioJoy" class="mx-auto mt-8 w-full max-w-3xl" />
+        <p class="era mt-6 text-4xl md:text-6xl" style="color:#f5a623">Someone Somewhere</p>
+        <p class="mt-2 text-sm">New single · out 6 November</p>
+        <a href="#music" class="inline-flex mt-10 h-12 items-center rounded-md px-6 text-sm font-semibold" style="background:#f5a623;color:#07080c">The songs</a>
+      </div>
+    </section>
+    <section>
+      <img src="may-dreams-unfold.jpg" alt="" class="w-full max-h-[70vh] object-cover" />
+      <div class="mx-auto max-w-3xl px-4 py-16 text-center">
+        <h2 class="era text-4xl">May dreams unfold.</h2>
+      </div>
+    </section>
+    <section id="music" class="mx-auto max-w-6xl px-4 py-20">
+      <h2 class="text-5xl">Music</h2>
+      <p class="mt-4 max-w-xl">New single <em>Someone Somewhere</em> lands 6 November. Pre-save links coming soon.</p>
+      <div class="mt-12 grid gap-10 md:grid-cols-2 md:items-center">
+        <img src="question-mark-touch.jpg" alt="" class="w-full object-cover aspect-square" />
+        <div>
+          <h3 class="text-4xl">Someone Somewhere</h3>
+          <p class="mt-3">Elegant — with club mixes. Powerhouse vocalist announced soon.</p>
+          <p class="mt-4">A charity beneficiary for the Song 4 Pippa mix is awaiting confirmation.</p>
+        </div>
+      </div>
+      <div class="mt-16 grid gap-10 md:grid-cols-2 md:items-center">
+        <div>
+          <h3 class="text-4xl">Shook By The Look</h3>
+          <p class="mt-3">Released 2023. An anthem of sass.</p>
+          <button class="play-track mt-8 h-11 rounded-md px-5 text-sm" style="background:#f5a623;color:#07080c" data-src="shook-sample.mp3">Sample</button>
+        </div>
+        <img src="shook.jpg" alt="Shook By The Look" class="aspect-square w-full object-cover" />
+      </div>
+    </section>
+    <section id="aura" class="mx-auto max-w-6xl px-4 py-20">
+      <h2 class="era text-5xl" style="color:#f5a623">Yellow Aura</h2>
+      <p class="mt-4">The next suite, in gold. Nothing on it is finished, and nobody has sung it yet.</p>
+    </section>
+    <section id="about" class="mx-auto max-w-6xl px-4 py-20 grid gap-10 md:grid-cols-2">
+      <div>
+        <p>The writer</p>
+        <img src="logo-mark.png" alt="" class="mt-3 w-full max-w-sm" />
+      </div>
+      <img src="dove-phone-ig.jpg" alt="" class="w-full object-cover aspect-[3/4]" />
+    </section>
+    <section id="list" class="mx-auto max-w-6xl px-4 py-20">
+      <h2 class="text-4xl">If they find a home.</h2>
+      <form id="list-form" class="mt-8 space-y-4 max-w-md">
+        <input id="name" name="name" type="text" required placeholder="Your name" class="w-full rounded-md px-4 py-3 text-sm" style="background:#111;border:1px solid #333;color:#f4f1ea" />
+        <input id="email" name="email" type="email" required placeholder="you@example.com" class="w-full rounded-md px-4 py-3 text-sm" style="background:#111;border:1px solid #333;color:#f4f1ea" />
+        <button type="submit" class="w-full rounded-md px-5 py-3 text-sm font-semibold" style="background:#f5a623;color:#07080c">Join the list</button>
+        <p id="form-success" class="hidden">You’re on the list. Thank you.</p>
+        <p id="form-error" class="hidden">Something went wrong.</p>
+      </form>
+    </section>
+  </main>
+  <audio id="audio" preload="metadata"></audio>
+  <script>
+    const audio = document.getElementById('audio');
+    document.querySelectorAll('.play-track').forEach(btn => {
+      btn.addEventListener('click', () => { audio.src = btn.dataset.src; audio.play().catch(()=>{}); });
+    });
+    const listForm = document.getElementById('list-form');
+    listForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = {
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim().toLowerCase(),
+        intent: 'love',
+        message: ''
+      };
+      try {
+        const res = await fetch('https://formspree.io/f/xppzzeod', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (!res.ok) throw new Error('fail');
+        document.getElementById('form-success').classList.remove('hidden');
+        listForm.reset();
+      } catch (err) {
+        document.getElementById('form-error').classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
