@@ -7,7 +7,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="google-site-verification" content="r1H66RN078U0JwIiFOLY94wGPQe7j51mavKXHl9Q-VI" />
   <title>AudioJoy — UK Queer Pop Writing</title>
-  <meta name="description" content="AudioJoy — UK queer pop writing. New single Someone Somewhere, out 6 November." />
+  <meta name="description" content="AudioJoy — UK queer pop writing. New single Someone Somewhere, now arriving in the new year." />
   <meta name="theme-color" content="#07080c" />
   <link rel="canonical" href="https://audiojoy.uk/" />
   <meta property="og:type" content="website" />
@@ -15,7 +15,7 @@
   <meta property="og:site_name" content="AudioJoy" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:title" content="AudioJoy" />
-  <meta property="og:description" content="UK queer pop writing. New single Someone Somewhere — out 6 November." />
+  <meta property="og:description" content="UK queer pop writing. New single Someone Somewhere — now arriving in the new year." />
   <meta property="og:image" content="https://audiojoy.uk/question-mark-touch.jpg" />
   <link rel="icon" type="image/png" href="logo-mark.png" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"AudioJoy","url":"https://audiojoy.uk/","image":"https://audiojoy.uk/logo-mark.png","genre":"Pop","sameAs":["https://music.apple.com/us/artist/london-calling/1695892054","https://open.spotify.com/artist/2hSwuSFQrPmJkJn00JSye5","https://www.instagram.com/audiojoy.uk/","https://www.tiktok.com/@audiojoy.uk"],"track":[{"@type":"MusicRecording","name":"Someone Somewhere","byArtist":{"@type":"MusicGroup","name":"AudioJoy"},"image":"https://audiojoy.uk/question-mark-touch.jpg","url":"https://audiojoy.uk/#music"},{"@type":"MusicRecording","name":"Shook By The Look","byArtist":{"@type":"MusicGroup","name":"AudioJoy"},"image":"https://audiojoy.uk/shook.jpg","url":"https://music.apple.com/us/album/shook-by-the-look-matt-pop-radio-remix/1695899288?i=1695899289"}]}</script>
@@ -34,19 +34,39 @@
     @keyframes kenburns { 0% { transform: scale(1) translate(0, 0); } 100% { transform: scale(1.09) translate(-1.5%, -1%); } }
     .hero-glow { position: absolute; left: 50%; top: 42%; width: 640px; height: 640px; max-width: 90vw; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(245,166,35,0.38) 0%, rgba(245,166,35,0) 70%); filter: blur(6px); animation: glow-drift 13s ease-in-out infinite alternate; pointer-events: none; }
     @keyframes glow-drift { 0% { transform: translate(-54%, -53%) scale(1); } 100% { transform: translate(-46%, -47%) scale(1.18); } }
+    /* newsflash */
+    .nf-hero-pad { padding-top: 8rem; }
+    #news { scroll-margin-top: 7rem; }
+    .nf-row { column-gap: 0.5rem; row-gap: 0.25rem; }
+    .nf-badge { border-radius: 0.125rem; }
+    .nf-arrow { width: 0.875rem; height: 0.875rem; flex-shrink: 0; }
+    .nf-link { text-decoration-line: underline; text-underline-offset: 3px; }
+    .nf-body { padding-top: 4rem; padding-bottom: 4rem; }
+    @media (min-width: 768px) { .nf-body { padding-top: 5rem; padding-bottom: 5rem; } }
   </style>
 </head>
 <body class="bg-bg text-fg font-sans min-h-dvh flex flex-col">
-  <header class="fixed top-0 inset-x-0 z-40 border-b border-border/60 bg-bg/85 backdrop-blur-md">
-    <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 md:px-6">
-      <a href="#" class="flex items-center gap-2"><img src="logo-mark.png" alt="AudioJoy" class="h-7 w-auto" /></a>
-      <nav class="hidden items-center gap-6 text-sm font-medium text-muted md:flex">
-        <a href="#music">Music</a><a href="#aura">Yellow Aura</a><a href="#about">About</a><a href="#list">List</a>
-      </nav>
-    </div>
-  </header>
+  <div class="fixed top-0 inset-x-0 z-40">
+    <a href="#news" class="block bg-primary text-bg transition-colors hover:bg-fg">
+      <div class="nf-row mx-auto flex max-w-6xl flex-wrap items-center justify-center px-4 py-2 text-center text-xs font-semibold">
+        <span class="nf-badge bg-bg/20 px-2 py-0.5 uppercase tracking-brand">News</span>
+        <span>Someone Somewhere has moved to the new year</span>
+        <span class="nf-link inline-flex items-center gap-1">Read why
+          <svg class="nf-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+    </a>
+    <header class="border-b border-border/60 bg-bg/85 backdrop-blur-md">
+      <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 md:px-6">
+        <a href="#" class="flex items-center gap-2"><img src="logo-mark.png" alt="AudioJoy" class="h-7 w-auto" /></a>
+        <nav class="hidden items-center gap-6 text-sm font-medium text-muted md:flex">
+          <a href="#news" class="text-primary">News</a><a href="#music">Music</a><a href="#aura">Yellow Aura</a><a href="#about">About</a><a href="#list">List</a>
+        </nav>
+      </div>
+    </header>
+  </div>
   <main id="main" class="flex-1">
-    <section class="relative min-h-[100dvh] flex items-center pt-16 overflow-hidden">
+    <section class="nf-hero-pad relative min-h-[100dvh] flex items-center overflow-hidden">
       <div class="absolute inset-0">
         <img src="question-mark-touch.jpg" alt="" class="hero-kenburns h-full w-full object-cover object-center opacity-90" fetchpriority="high" />
         <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/70 to-bg/30"></div>
@@ -55,9 +75,21 @@
         <p class="text-xs font-medium tracking-brand uppercase text-primary">UK · Queer pop writing</p>
         <img src="logo-mark.png" alt="" class="relative mx-auto mt-8 h-auto w-full max-w-3xl" />
         <p class="era mt-6 text-4xl md:text-6xl text-primary">Someone Somewhere</p>
-        <p class="mx-auto mt-2 text-sm text-primary/90">New single · out 6 November</p>
+        <p class="mx-auto mt-2 text-sm text-primary/90">New single · now arriving in the new year</p>
         <p class="mx-auto mt-6 max-w-lg text-base text-fg/90">Pre-save links coming soon.</p>
         <div class="mt-10"><a href="#music" class="inline-flex h-12 items-center rounded-md bg-primary px-6 text-sm font-semibold text-bg aura-glow">The songs</a></div>
+      </div>
+    </section>
+    <section id="news" class="border-y border-border bg-surface/40">
+      <div class="nf-body mx-auto max-w-3xl px-4">
+        <p class="text-xs tracking-brand uppercase text-primary">Newsflash · October 2026</p>
+        <h2 class="era mt-3 text-3xl md:text-4xl">Someone Somewhere is moving to the new year.</h2>
+        <div class="mt-6 space-y-5 text-base leading-relaxed text-muted">
+          <p>It was due on 6 November. It&rsquo;ll now be January, possibly February.</p>
+          <p>The honest reason is that the song changed. What began as one idea has become something else &mdash; which is the best kind of surprise, and also the kind that needs more time. Rushing it to hit a date would serve the date, not the song.</p>
+          <p>The charity beneficiary for the <em>Song 4 Pippa</em> mix is being reconsidered too. The intention is unchanged: proceeds, after costs, go to a charity supporting orphans and widows. I&rsquo;m taking the time to find the right one.</p>
+        </div>
+        <p class="mt-8 text-sm text-primary"><a href="#list" class="nf-link hover:text-fg">Anyone on the list hears the new date first.</a></p>
       </div>
     </section>
     <section id="music" class="mx-auto max-w-6xl px-4 py-20">
@@ -66,11 +98,11 @@
       <div class="reveal mt-16 grid gap-10 md:grid-cols-2 md:items-center">
         <div class="relative overflow-hidden rounded-lg framed"><img src="question-mark-touch.jpg" alt="" class="aspect-square w-full object-cover" /></div>
         <div>
-          <p class="text-xs uppercase text-primary">New single · Out 6 November</p>
+          <p class="text-xs uppercase text-primary">New single · New year</p>
           <h3 class="mt-2 font-display text-4xl">Someone Somewhere</h3>
           <p class="mt-4 text-base">Powerhouse vocalist announced soon.</p>
           <p class="mt-3 text-sm text-muted">Pre-save links coming soon.</p>
-          <div class="mt-6 rounded-lg border border-border p-5"><p class="text-sm">A charity beneficiary for the Song 4 Pippa mix is awaiting confirmation.</p></div>
+          <div class="mt-6 rounded-lg border border-border p-5"><p class="text-sm">Proceeds from the Song 4 Pippa mix, after costs, go to a charity supporting orphans and widows. I'm taking the time to choose the right one.</p></div>
         </div>
       </div>
       <div class="reveal mt-16 grid gap-10 md:grid-cols-2 md:items-center">
