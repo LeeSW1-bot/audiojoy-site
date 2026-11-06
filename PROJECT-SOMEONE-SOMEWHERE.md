@@ -3,12 +3,13 @@ Live: https://audiojoy.uk/
 Repo: LeeSW1-bot/audiojoy-site (main, GitHub Pages)
 
 ## Rules
-- Lead single: Someone Somewhere — 6 November 2026
+- Lead single: Someone Somewhere — now arriving in the new year (January, possibly February; was due 6 November 2026)
 - Hero line: Pre-save links coming soon.
 - Do not explain the record. Do not say out everywhere.
-- Charity: awaiting confirmation. Do not name a charity.
-- Looking for a vocalist who can match or exceed the demo. Lyrics still being tweaked.
+- Charity: awaiting confirmation. Do not name a charity. (Song 4 Pippa mix; charity chosen, agreement pending)
+- Looking for a vocalist who can match or exceed the demo. Powerhouse 8-octave-range vocalist — name announced soon. Lyrics still being tweaked.
 - Calm tone. No Grok branding.
+- Site newsflash (October 2026): song changed; more time needed. Anyone on the list hears the new date first.
 
 ## Shook
 - Photo, hair and makeup by Darren Evans. The one time I wore makeup.
